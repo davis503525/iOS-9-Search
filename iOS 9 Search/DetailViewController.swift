@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreSpotlight
 
 class DetailViewController: UIViewController {
 
@@ -23,7 +24,7 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if self.nameLabel != nil {
+        if self.nameLabel != nil && self.detailItem != nil {
             self.nameLabel.text = detailItem.name
             self.genreLabel.text = detailItem.genre
             
@@ -42,10 +43,6 @@ class DetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    override func updateUserActivityState(activity: NSUserActivity) {
-        super.updateUserActivityState(activity)
     }
 }
 

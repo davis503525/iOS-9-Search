@@ -44,11 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    func application(application: UIApplication, willContinueUserActivityWithType userActivityType: String) -> Bool {
-        
-        return true
-    }
 
     // MARK: - Split view
 
