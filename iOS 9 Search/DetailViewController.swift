@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreSpotlight
 
 class DetailViewController: UIViewController {
 
