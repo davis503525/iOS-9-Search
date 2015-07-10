@@ -24,6 +24,7 @@ class MasterViewController: UITableViewController {
         Show(name: "How to become rich", genre: "Talk Show", time: NSDate(timeIntervalSinceNow: 3600 * 2.5)),
         Show(name: "NET Daily", genre: "News", time: NSDate(timeIntervalSinceNow: 3600 * 4))
     ]
+    var showToRestore: Show?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +54,12 @@ class MasterViewController: UITableViewController {
                 let object = objects[indexPath.row] as Show
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
+                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+            else if let show = showToRestore {
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+                controller.detailItem = show
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
