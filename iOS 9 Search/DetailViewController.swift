@@ -44,6 +44,8 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func updateUserActivityState(activity: NSUserActivity) {
+        super.updateUserActivityState(activity)
+    }
 }
 
