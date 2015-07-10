@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		602DA11B1B4FA26200C3CD4A /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602DA11A1B4FA26200C3CD4A /* CoreSpotlight.framework */; };
+		602DA11D1B4FA47000C3CD4A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602DA11C1B4FA47000C3CD4A /* MobileCoreServices.framework */; };
 		60E4DDBB1B4E267A00B36FA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4DDBA1B4E267A00B36FA6 /* AppDelegate.swift */; };
 		60E4DDBD1B4E267A00B36FA6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4DDBC1B4E267A00B36FA6 /* MasterViewController.swift */; };
 		60E4DDBF1B4E267A00B36FA6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4DDBE1B4E267A00B36FA6 /* DetailViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		602DA11A1B4FA26200C3CD4A /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
+		602DA11C1B4FA47000C3CD4A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		60E4DDB71B4E267A00B36FA6 /* iOS 9 Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS 9 Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E4DDBA1B4E267A00B36FA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60E4DDBC1B4E267A00B36FA6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				602DA11D1B4FA47000C3CD4A /* MobileCoreServices.framework in Frameworks */,
+				602DA11B1B4FA26200C3CD4A /* CoreSpotlight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,8 @@
 		60E4DDAE1B4E267A00B36FA6 = {
 			isa = PBXGroup;
 			children = (
+				602DA11C1B4FA47000C3CD4A /* MobileCoreServices.framework */,
+				602DA11A1B4FA26200C3CD4A /* CoreSpotlight.framework */,
 				60E4DDB91B4E267A00B36FA6 /* iOS 9 Search */,
 				60E4DDB81B4E267A00B36FA6 /* Products */,
 			);

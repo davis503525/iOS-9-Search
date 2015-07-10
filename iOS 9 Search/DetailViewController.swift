@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreSpotlight
+import MobileCoreServices
 
 class DetailViewController: UIViewController {
 
@@ -31,6 +32,23 @@ class DetailViewController: UIViewController {
             let dateFormatter = NSDateFormatter()
             dateFormatter.timeStyle = .ShortStyle
             self.timeLabel.text = dateFormatter.stringFromDate(detailItem.time)
+            
+            let activity = NSUserActivity(activityType: "com.tutsplus.iOS-9-Search.displayShow")
+            activity.userInfo = ["name": detailItem.name, "genre": detailItem.genre, "time": detailItem.time]
+            activity.title = detailItem.name
+            var keywords = detailItem.name.componentsSeparatedByString(" ")
+            keywords.append(detailItem.genre)
+            activity.keywords = Set(keywords)
+            activity.eligibleForHandoff = false
+            activity.eligibleForSearch = true
+            //activity.eligibleForPublicIndexing = true
+            //activity.expirationDate = NSDate()
+            
+            let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
+            attributeSet.title = detailItem.name
+            attributeSet.contentDescription = detailItem.genre + "\n" + dateFormatter.stringFromDate(detailItem.time)
+
+            activity.becomeCurrent()
         }
     }
 
